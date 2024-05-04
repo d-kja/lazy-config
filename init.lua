@@ -120,7 +120,7 @@ require('lazy').setup({
     lazy = false,
     keys = {
       {
-        '<leader>fc',
+        '<leader>cf',
         function()
           require('conform').format { async = true, lsp_fallback = true }
         end,
