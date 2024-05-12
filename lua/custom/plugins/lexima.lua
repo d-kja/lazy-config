@@ -19,8 +19,8 @@ return {
     call "{'char': '`', 'at': '`\\S\\{-1,}\\%#\\|\\%#\\S\\{-1,}`'}"
 
     -- NOTE: Parentesis, brackets and curly brackets
-    call "{'char': '(', 'at': '\\%#\\S\\{-1,})'}"
-    call "{'char': '[', 'at': '\\%#\\S\\{-1,}]'}"
-    call "{'char': '{', 'at': '\\%#\\S\\{-1,}}'}"
+    -- call "{'char': '(', 'at': '\\%#\\S\\{-1,})'}"
+    -- call "{'char': '[', 'at': '\\%#\\S\\{-1,}]'}"
+    -- call "{'char': '{', 'at': '\\%#\\S\\{-1,}}'}"
   end,
 }

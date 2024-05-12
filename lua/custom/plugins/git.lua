@@ -28,5 +28,17 @@ return {
         map('n', '<leader>Gd', gitsigns.diffthis)
       end,
     }
+
+    local hl = vim.api.nvim_set_hl
+
+    -- Gitsigns
+    hl(0, 'GitGutterAdd', { fg = 'NONE', bg = 'NONE' })
+    hl(0, 'GitGutterChange', { fg = 'NONE', bg = 'NONE' })
+    hl(0, 'GitGutterDelete', { fg = 'NONE', bg = 'NONE' })
+    hl(0, 'GitGutterChangeDelete', { fg = 'NONE', bg = 'NONE' })
+
+    hl(0, 'GitSignsAdd', { fg = 'NONE', bg = 'NONE' })
+    hl(0, 'GitSignsChange', { fg = 'NONE', bg = 'NONE' })
+    hl(0, 'GitSignsDelete', { fg = 'NONE', bg = 'NONE' })
   end,
 }
