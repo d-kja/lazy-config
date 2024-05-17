@@ -1,53 +1,12 @@
 return {
-  -- {
-  --   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000, -- Make sure to load this before all the other start plugins.
-  --   opts = {
-  --     style = 'moon',
-  --     transparent = true,
-  --     styles = {
-  --       sidebars = 'transparent',
-  --       floats = 'transparent',
-  --     },
-  --   },
-  --   init = function()
-  --     -- Load the colorscheme here.
-  --     -- Like many other themes, this one has different styles, and you could load
-  --     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  --     vim.cmd.colorscheme 'tokyonight-storm'
-  --
-  --     -- You can configure highlights by doing something like:
-  --     vim.cmd.hi 'Comment gui=none'
-  --   end,
-  -- },
   {
-    'Enonya/yuyuko.vim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    -- NOTE: Setting up transparent background
+    'd-kja/yuyuko.vim',
+    priority = 1000,
+
     init = function()
       vim.cmd.colorscheme 'yuyuko'
-
-      vim.cmd.hi 'Comment gui=none'
-      vim.cmd.hi 'Normal guibg=none'
-      vim.cmd.hi 'Normal ctermbg=none'
-      vim.cmd.hi 'NonText guibg=none'
-      vim.cmd.hi 'NonText guibg=none'
     end,
   },
-  -- {
-  --   'shaunsingh/nord.nvim',
-  --   config = function()
-  --     vim.g.nord_contrast = false
-  --     vim.g.nord_borders = true
-  --     vim.g.nord_disable_background = true
-  --     vim.g.nord_cursorline_transparent = false
-  --     vim.g.nord_enable_sidebar_background = false
-  --     vim.g.nord_italic = false
-  --     vim.g.nord_uniform_diff_background = true
-  --     vim.g.nord_bold = false
-  --   end,
-  -- },
   {
     'xiyaowong/transparent.nvim',
     config = function()
@@ -98,5 +57,15 @@ return {
     opts = {
       colorscheme = 'yuyuko',
     },
+    config = function()
+      vim.cmd.hi 'Comment gui=NONE'
+      vim.cmd.hi 'Normal guibg=NONE'
+      vim.cmd.hi 'Normal ctermbg=NONE'
+      vim.cmd.hi 'NonText guibg=NONE'
+      vim.cmd.hi 'NonText guibg=NONE'
+      vim.cmd.hi 'netrwPlain guibg=NONE'
+      vim.cmd.hi 'netrwDir guibg=NONE'
+      vim.cmd.hi '@tag guibg=NONE'
+    end,
   },
 }
