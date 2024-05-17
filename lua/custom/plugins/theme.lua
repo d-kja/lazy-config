@@ -1,6 +1,6 @@
 return {
   {
-    'd-kja/yuyuko.vim',
+    'Enonya/yuyuko.vim',
     priority = 1000,
 
     init = function()
