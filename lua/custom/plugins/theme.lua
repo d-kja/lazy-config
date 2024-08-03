@@ -1,11 +1,16 @@
 return {
+  -- {
+  --   'Enonya/yuyuko.vim',
+  --   priority = 1000,
+  --
+  --   init = function()
+  --     vim.cmd.colorscheme 'yuyuko'
+  --   end,
+  -- },
   {
-    'Enonya/yuyuko.vim',
-    priority = 1000,
-
-    init = function()
-      vim.cmd.colorscheme 'yuyuko'
-    end,
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "night" },
   },
   {
     'xiyaowong/transparent.nvim',
@@ -41,7 +46,7 @@ return {
           'EndOfBuffer',
         },
         extra_groups = {
-          'NormalFloat', -- plugins which have float panel such as Lazy, Mason, LspInfo
+          'NormalFloat',    -- plugins which have float panel such as Lazy, Mason, LspInfo
           'NvimTreeNormal', -- NvimTree
         },
         exclude_groups = {},
@@ -55,7 +60,8 @@ return {
   {
     'LazyVim/LazyVim',
     opts = {
-      colorscheme = 'yuyuko',
+      -- colorscheme = 'yuyuko',
+      colorscheme = 'tokyonight'
     },
     config = function()
       vim.cmd.hi 'Comment gui=NONE'
