@@ -4,7 +4,6 @@
 -- WARN: [[ Globals ]]
 
 local opt = vim.opt
-local global = vim.g
 local keymap = vim.keymap
 
 -- INFO: [[ Options ]]
@@ -35,24 +34,5 @@ opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 opt.hlsearch = true
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
-global.rustaceanvim = {
-  server = {
-    cmd = function()
-      local mason_registry = require("mason-registry")
-
-      if mason_registry.is_installed("rust-analyzer") then
-        -- This may need to be tweaked depending on the operating system.
-        local ra = mason_registry.get_package("rust-analyzer")
-        local ra_filename = ra:get_receipt():get().links.bin["rust-analyzer"]
-
-        return { ("%s/%s"):format(ra:get_install_path(), ra_filename or "rust-analyzer") }
-      else
-        -- global installation
-        return { "rust-analyzer" }
-      end
-    end,
-  },
-}
 
 return {}

@@ -33,7 +33,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
 
     { import = "plugins" },
-    { import = "override" },
   },
   defaults = {
     lazy = false,
