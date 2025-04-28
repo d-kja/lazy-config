@@ -5,6 +5,7 @@ vim.keymap.set({ "n", "v" }, "<leader>cfa", function()
 end, { desc = "Format" })
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+vim.keymap.set("n", "<leader>E", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
 vim.keymap.set("t", "<leader>tt", "<cmd>close<cr>", { desc = "Hide Terminal" })
 vim.keymap.set("n", "<leader>tq", function()
