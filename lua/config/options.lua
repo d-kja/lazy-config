@@ -35,4 +35,7 @@ opt.scrolloff = 10
 opt.hlsearch = true
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Copy to buffer
+opt.clipboard = "unnamedplus"
+
 return {}
