@@ -5,18 +5,19 @@
 
 local opt = vim.opt
 local keymap = vim.keymap
+local global = vim.g
 
 -- INFO: [[ Options ]]
 
 -- Configure NETRW view
-vim.g.netrw_banner = 0 -- Hide banner
+global.netrw_banner = 0 -- Hide banner
 -- vim.g.netrw_altv = 1 -- Open with right splitting
 -- vim.g.netrw_liststyle = 3 -- Tree-style view
 -- vim.g.netrw_browse_split = 4 -- Open in previous window
 -- vim.g.netrw_list_hide = (vim.fn["netrw_gitignore#Hide"]()) .. [[,\(^\|\s\s\)\zs\.\S\+]] -- use .gitignore
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+global.have_nerd_font = false
 
 -- Disable smooth scroll (shit sucks)
 opt.smoothscroll = false
@@ -34,6 +35,9 @@ opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 opt.hlsearch = true
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- option to avoid conflicts with Prettier.
+global.lazyvim_prettier_needs_config = true
 
 -- Copy to buffer
 opt.clipboard = "unnamedplus"
