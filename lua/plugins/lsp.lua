@@ -56,7 +56,10 @@ return {
         ---@type lspconfig.options
         servers = {
           rust_analyzer = {
-            enabled = false, -- skip instalation
+            diagnostics = {
+              enable = true,
+            },
+            -- enabled = false, -- skip instalation
           },
           lua_ls = {
             -- mason = false, -- set to false if you don't want this server to be installed with mason
